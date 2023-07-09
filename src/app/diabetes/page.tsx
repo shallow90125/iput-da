@@ -76,6 +76,7 @@ export default function Diabetes() {
         gap={4}
         onSubmit={handleSubmit((data) => {
           const params = [
+            `target=diabetes`,
             `age=${data.age}`,
             `sex=${data.sex}`,
             `highChol=${data.highChol}`,

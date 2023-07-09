@@ -67,6 +67,7 @@ export default function Hypertension() {
         gap={4}
         onSubmit={handleSubmit((data) => {
           const params = [
+            `target=hypertension`,
             `age=${data.age}`,
             `sex=${data.sex}`,
             `cp=${data.cp}`,
