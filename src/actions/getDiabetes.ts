@@ -1,7 +1,15 @@
 "use server";
 
 export async function getDiabetes(formData: Diabetes) {
-  console.log(formData);
-  await new Promise((s) => setTimeout(s, 3000));
-  return 1;
+  const url = process.env.BASE_URL + "/diabetes";
+  const params = new URLSearchParams(Object.entries(formData)).toString();
+  try {
+    const res = await fetch(url + "?" + params, {
+      cache: "no-store",
+    });
+    const data: ResponseData = await res.json();
+    return data.isSick;
+  } catch (error) {
+    return null;
+  }
 }

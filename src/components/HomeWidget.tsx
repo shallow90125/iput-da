@@ -22,7 +22,7 @@ export default function HomeWidget(props: Props) {
       placeItems="streach"
       bgColor={props.bgColor}
       rounded="lg"
-      p="2"
+      p="4"
     >
       <Box flex={1}>
         <Text fontSize="2xl" fontWeight="bold">
