@@ -23,13 +23,13 @@ export default function Home() {
           describe="症状とライフスタイルを分析し、糖尿病の可能性を評価します"
         ></HomeWidget>
         <HomeWidget
-          href="/diabetes"
+          href="/hypertension"
           text="高血圧"
           bgColor="cyan.300"
           describe="血圧と生活習慣から、高血圧のリスクを予測します"
         ></HomeWidget>
         <HomeWidget
-          href="/diabetes"
+          href="/stroke"
           text="脳卒中"
           bgColor="yellow.300"
           describe="異常な症状を検出し、脳卒中の早期警告を提供します"
