@@ -351,6 +351,114 @@ export default function Hypertension() {
                 <FormErrorMessage>必須の質問です</FormErrorMessage>
               )}
             </FormControl>
+            <FormControl isInvalid={errors.slope != undefined}>
+              <FormLabel>ピーク運動時のSTセグメントの傾き</FormLabel>
+              <RadioGroup display="grid">
+                <Wrap>
+                  <Radio
+                    value="0"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("slope", { required: true })}
+                  >
+                    上り勾配
+                  </Radio>
+                  <Radio
+                    value="1"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("slope", { required: true })}
+                  >
+                    平坦
+                  </Radio>
+                  <Radio
+                    value="2"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("slope", { required: true })}
+                  >
+                    下り勾配
+                  </Radio>
+                </Wrap>
+              </RadioGroup>
+              {errors.slope && (
+                <FormErrorMessage>必須の質問です</FormErrorMessage>
+              )}
+            </FormControl>
+            <FormControl isInvalid={errors.ca != undefined}>
+              <FormLabel>透視検査での着色された主要血管の数</FormLabel>
+              <RadioGroup display="grid">
+                <Wrap>
+                  <Radio
+                    value="0"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("ca", { required: true })}
+                  >
+                    なし
+                  </Radio>
+                  <Radio
+                    value="1"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("ca", { required: true })}
+                  >
+                    1つ
+                  </Radio>
+                  <Radio
+                    value="2"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("ca", { required: true })}
+                  >
+                    2つ
+                  </Radio>
+                  <Radio
+                    value="3"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("ca", { required: true })}
+                  >
+                    3つ以上
+                  </Radio>
+                </Wrap>
+              </RadioGroup>
+              {errors.ca && <FormErrorMessage>必須の質問です</FormErrorMessage>}
+            </FormControl>
+            <FormControl isInvalid={errors.thal != undefined}>
+              <FormLabel>サラセミアの状態</FormLabel>
+              <RadioGroup display="grid">
+                <Wrap>
+                  <Radio
+                    value="3"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("thal", { required: true })}
+                  >
+                    正常
+                  </Radio>
+                  <Radio
+                    value="6"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("thal", { required: true })}
+                  >
+                    固定欠損
+                  </Radio>
+                  <Radio
+                    value="7"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("thal", { required: true })}
+                  >
+                    可逆欠損
+                  </Radio>
+                </Wrap>
+              </RadioGroup>
+              {errors.thal && (
+                <FormErrorMessage>必須の質問です</FormErrorMessage>
+              )}
+            </FormControl>
             <SimpleGrid placeItems="center">
               <Button
                 bgColor="green.700"

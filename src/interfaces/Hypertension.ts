@@ -9,4 +9,7 @@ interface Hypertension {
   thalach: number;
   exang: number;
   oldpeak: number;
+  slope: number;
+  ca: number;
+  thal: number;
 }

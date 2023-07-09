@@ -8,6 +8,11 @@ import {
   FormControl,
   FormErrorMessage,
   FormLabel,
+  NumberDecrementStepper,
+  NumberIncrementStepper,
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
   Radio,
   RadioGroup,
   Select,
@@ -335,6 +340,208 @@ export default function Diabetes() {
                 </Wrap>
               </RadioGroup>
               {errors.veggies && (
+                <FormErrorMessage>必須の質問です</FormErrorMessage>
+              )}
+            </FormControl>
+            <FormControl isInvalid={errors.hvyAlcohlConsump != undefined}>
+              <FormLabel>週に7杯以上の飲酒</FormLabel>
+              <RadioGroup display="grid">
+                <Wrap>
+                  <Radio
+                    value="1"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("hvyAlcohlConsump", { required: true })}
+                  >
+                    はい
+                  </Radio>
+                  <Radio
+                    value="0"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("hvyAlcohlConsump", { required: true })}
+                  >
+                    いいえ
+                  </Radio>
+                </Wrap>
+              </RadioGroup>
+              {errors.hvyAlcohlConsump && (
+                <FormErrorMessage>必須の質問です</FormErrorMessage>
+              )}
+            </FormControl>
+            <FormControl isInvalid={errors.genHlth != undefined}>
+              <FormLabel>自身の健康状態に対する認識</FormLabel>
+              <RadioGroup display="grid">
+                <Wrap>
+                  <Radio
+                    value="5"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("genHlth", { required: true })}
+                  >
+                    非常に悪い
+                  </Radio>
+                  <Radio
+                    value="4"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("genHlth", { required: true })}
+                  >
+                    悪い
+                  </Radio>
+                  <Radio
+                    value="3"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("genHlth", { required: true })}
+                  >
+                    普通
+                  </Radio>
+                  <Radio
+                    value="2"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("genHlth", { required: true })}
+                  >
+                    良い
+                  </Radio>
+                  <Radio
+                    value="1"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("genHlth", { required: true })}
+                  >
+                    非常に良い
+                  </Radio>
+                </Wrap>
+              </RadioGroup>
+              {errors.genHlth && (
+                <FormErrorMessage>必須の質問です</FormErrorMessage>
+              )}
+            </FormControl>
+            <FormControl isInvalid={errors.mentHlth != undefined}>
+              <FormLabel>過去30日間の精神的不調を感じた日数</FormLabel>
+              <NumberInput
+                min={1}
+                max={30}
+                borderColor="black"
+                colorScheme="green"
+                placeholder=" "
+              >
+                <NumberInputField
+                  {...register("mentHlth", {
+                    required: true,
+                    validate: (value) => value.toString() != " ",
+                  })}
+                />
+                <NumberInputStepper>
+                  <NumberIncrementStepper />
+                  <NumberDecrementStepper />
+                </NumberInputStepper>
+              </NumberInput>
+              {errors.mentHlth && (
+                <FormErrorMessage>必須の質問です</FormErrorMessage>
+              )}
+            </FormControl>
+            <FormControl isInvalid={errors.physHlth != undefined}>
+              <FormLabel>過去30日間の怪我や病気の日数</FormLabel>
+              <NumberInput
+                min={1}
+                max={30}
+                borderColor="black"
+                colorScheme="green"
+                placeholder=" "
+              >
+                <NumberInputField
+                  {...register("physHlth", {
+                    required: true,
+                    validate: (value) => value.toString() != " ",
+                  })}
+                />
+                <NumberInputStepper>
+                  <NumberIncrementStepper />
+                  <NumberDecrementStepper />
+                </NumberInputStepper>
+              </NumberInput>
+              {errors.physHlth && (
+                <FormErrorMessage>必須の質問です</FormErrorMessage>
+              )}
+            </FormControl>
+            <FormControl isInvalid={errors.diffWalk != undefined}>
+              <FormLabel>歩行が困難</FormLabel>
+              <RadioGroup display="grid">
+                <Wrap>
+                  <Radio
+                    value="1"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("diffWalk", { required: true })}
+                  >
+                    はい
+                  </Radio>
+                  <Radio
+                    value="0"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("diffWalk", { required: true })}
+                  >
+                    いいえ
+                  </Radio>
+                </Wrap>
+              </RadioGroup>
+              {errors.diffWalk && (
+                <FormErrorMessage>必須の質問です</FormErrorMessage>
+              )}
+            </FormControl>
+            <FormControl isInvalid={errors.stroke != undefined}>
+              <FormLabel>脳卒中になった経験がある</FormLabel>
+              <RadioGroup display="grid">
+                <Wrap>
+                  <Radio
+                    value="1"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("stroke", { required: true })}
+                  >
+                    はい
+                  </Radio>
+                  <Radio
+                    value="0"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("stroke", { required: true })}
+                  >
+                    いいえ
+                  </Radio>
+                </Wrap>
+              </RadioGroup>
+              {errors.stroke && (
+                <FormErrorMessage>必須の質問です</FormErrorMessage>
+              )}
+            </FormControl>
+            <FormControl isInvalid={errors.highBp != undefined}>
+              <FormLabel>高血圧である</FormLabel>
+              <RadioGroup display="grid">
+                <Wrap>
+                  <Radio
+                    value="1"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("highBp", { required: true })}
+                  >
+                    はい
+                  </Radio>
+                  <Radio
+                    value="0"
+                    borderColor="black"
+                    colorScheme="green"
+                    {...register("highBp", { required: true })}
+                  >
+                    いいえ
+                  </Radio>
+                </Wrap>
+              </RadioGroup>
+              {errors.highBp && (
                 <FormErrorMessage>必須の質問です</FormErrorMessage>
               )}
             </FormControl>
