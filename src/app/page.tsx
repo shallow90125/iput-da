@@ -11,7 +11,9 @@ export default function Home() {
       direction="column"
     >
       <Stack flex="none">
-        <Text fontSize="3xl">3つの病気のリスクをAIが診断します</Text>
+        <Text fontSize="3xl" fontWeight="bold" color="green.700">
+          3つの病気のリスクをAIが診断します
+        </Text>
       </Stack>
       <Grid templateRows="repeat(3, 1fr)" gap="4" flexGrow={1}>
         <HomeWidget

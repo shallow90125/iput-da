@@ -7,6 +7,7 @@ import {
   Flex,
   Grid,
   GridItem,
+  Text,
 } from "@/components/chakra-ui/react";
 import { Noto_Sans_JP } from "next/font/google";
 
@@ -42,7 +43,11 @@ export default function RootLayout({
                 bgColor="green.700"
                 color="white"
               >
-                <GridItem fontSize="2xl">AI健康診断</GridItem>
+                <GridItem fontSize="2xl">
+                  <Link href="/">
+                    <Text>AI健康診断</Text>
+                  </Link>
+                </GridItem>
               </Grid>
               <Divider />
               <Container as="main" flexGrow={1} display="grid">
@@ -59,10 +64,7 @@ export default function RootLayout({
                 color="white"
               >
                 <GridItem>
-                  &copy; 2023{" "}
-                  <Link href="https://github.com/shallow90125">
-                    shallow90125
-                  </Link>
+                  <Link href="/">&copy; 2023 iput-da</Link>
                 </GridItem>
               </Grid>
             </Flex>

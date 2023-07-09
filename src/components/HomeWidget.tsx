@@ -21,7 +21,6 @@ export default function HomeWidget(props: Props) {
       placeContent="streach"
       placeItems="streach"
       bgColor={props.bgColor}
-      color="blackAlpha.900"
       rounded="lg"
       p="2"
     >
