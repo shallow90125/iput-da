@@ -5,7 +5,7 @@ interface Stroke {
   heartDisease: number;
   everMarried: number;
   workType: number;
-  ResidenceType: number;
+  residenceType: number;
   avgGlucoseLevel: number;
   bmi: number;
   smokingStatus: number;
